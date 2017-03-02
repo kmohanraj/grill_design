@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pages</h1>
+<%= link_to 'New Page', new_window_path, class: "btn btn-primary" %>
+
+<div class="container">
+  <div class="form">
+    <thead>
+      <!-- <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Image</th>
+        <! <th colspan="2"></th> -->
+      <!-- </tr> -->
+    </thead>
+
+    <tbody>
+      <% @window.each do |w| %>
+        <tr>
+          <td><%= w.name %></td>
+          <td><%= w.description %></td>
+          <td><%= w.model %></td>
+          <td><%= w.price %></td>
+          <!-- <td><%#= image_tag page.image.thumb.url %></td> -->
+          
+          <td>
+          <!-- <div class="container">
+          <div class="row">
+          <div class=col-md-4>
+            <%#= image_tag page.image_url(:thumb) %> </td>
+            </div>
+            <div class=col-md-4>
+            <%#= image_tag page.image_url(:thumb) %> </td>
+            </div>
+            <div class=col-md-4 -->
+            <%#= image_tag @page.image.thumb.url %>
+            <div class="col-row">
+              <div class="col-md-4">
+                <a href="/window">
+                  <%= image_tag w.image_url(:thumb) %></a>
+                  <%= link_to 'Show', window_path(w.id) %>
+                  <%= link_to 'Edit', edit_window_path(w.id) %>
+                  <%= link_to 'Destroy', w, :id=>w.id, method: :delete,class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+              </div>
+            </div>
+            <%#= image_tag w.image.thumb.url %>
+            <%#= link_to 'Show', window %>
+             </td>
+           <!--  </div>
+            </div>
+            </div> -->
+          <!-- <td><%#= link_to 'Show', window_path %></td> -->
+          <!-- <td><%#= link_to 'Show', window_path(w.id) %></td>
+          <td><%##= link_to 'Destroy', w, :id=>w.id, method: :delete,class: "btn btn-danger", data: { confirm: 'Are you sure?' } %> </td> -->
+        </tr>
+      <% end %>
+    </tbody>
+  </div>
+</div>
+<br>
+
+
+
+

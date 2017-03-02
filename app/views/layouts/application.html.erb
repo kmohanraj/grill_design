@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Interior</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title> Responsive Single Page Template : Design View</title>
+    <!--REQUIRED STYLE SHEETS-->
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+      <!-- VEGAS STYLE CSS -->
+    <!-- <link href="../assets/scripts/vegas/jquery.vegas.min.css" rel="stylesheet" /> -->
+    <!-- CUSTOM STYLE CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  	 <%= render 'layouts/header'%>
+  <body>
+    
+    <section>
+      
+  		<!-- <div class="container" style="padding-top:20px;"> -->
+
+    <%= yield %>
+  		
+  	</section>
+
+  </body>
+
+  <footer>
+    <!--FOOTER SECTION -->
+    <div class="for-full-back" id="footer">
+        2014 www.yourdomain.com | All Right Reserved | by: <a href="http://binarytheme.com" target="_blank" style="color:#fff" >www.binarytheme.com</a>
+         
+    </div>
+    <!-- END FOOTER SECTION -->
+
+     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="../assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="../assets/plugins/bootstrap.js"></script>  
+    <!-- VEGAS SLIDESHOW SCRIPTS -->
+    <!-- <script src="../assets/plugins/vegas/jquery.vegas.min.js"></script> -->
+     <!-- SCROLL SCRIPTS -->
+    <script src="../assets/plugins/jquery.easing.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <!-- <script src="../assets/js/custom.js"></script> -->
+  	
+  </footer>
+</html>
+<!-- 
+<style type="text/css">
+body {
+  font-family: Arial, sans-serif;
+  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+</style> -->

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+  
+  <div class="form">
+
+      <%= link_to 'Edit', edit_window_path(@window) %> |
+      <%= link_to 'Back', window_path %>
+      <p>
+        <strong>Name:</strong>
+        <%= @window.name %>
+      </p>
+
+      <p>
+        <strong>Title:</strong>
+        <%= @window.title %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @window.description %>
+      </p>
+
+      <p>
+        <strong>Model:</strong>
+        <%= @window.model %>
+      </p>
+
+      <p>
+        <strong>Price:</strong>
+        <%= @window.price %>
+      </p>
+
+      <p>
+        <strong>Size:</strong>
+        <%= @window.size %>
+      </p>
+
+      <p>
+        <strong>Image:</strong>
+        <%= image_tag @window.image.thumb.url %>
+      </p>
+
+</div>

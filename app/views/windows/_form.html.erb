@@ -1,0 +1,70 @@
+<h2>Window Image Create</h2>
+  <div class="content-div bg-light grey-border shadow">
+        <%= form_for @window, :html=>{:class=>'form'} do |f| %>
+          <% if @window.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(window.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+              <ul>
+              <% window.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+        
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
+
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+          </div>
+
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+          </div>
+
+          <div class="field">
+            <%= f.label :model %>
+            <%= f.text_field :model %>
+          </div>
+
+
+          <div class="field">
+            <%= f.label :size %>
+            <%= f.number_field :size %>
+          </div>
+
+          <div class="field">
+            <%= f.label :price %>
+            <%= f.number_field :price %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image %>
+            <%= f.file_field :image %>
+            <% if f.object.image? %>
+              <%= image_tag f.object.image.thumb.url %>
+              <%= f.label :remove_image %>
+              <%= f.check_box :remove_image %> 
+            <% end %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+      
+        <% end %>
+  </div>
+<!-- 
+<style type="text/css">
+.field {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+</style> -->
